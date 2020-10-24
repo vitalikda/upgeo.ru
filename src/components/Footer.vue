@@ -6,8 +6,9 @@
           <g-image
             alt="UPGEO logo"
             src="~/assets/img/upgeo-logo-dark.png"
-            class="w-full py-2"
-            width="300"
+            class="w-full max-w-sm py-2"
+            width="500"
+            quality="100"
           />
           <h5 class="py-2 mt-0 text-gray-700 text-md">
             197110, Санкт-Петербург, ул. Ждановская, д.29, оф.13.

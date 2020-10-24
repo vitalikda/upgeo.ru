@@ -13,13 +13,15 @@
         class="relative flex justify-between w-full lg:w-auto lg:static lg:block lg:justify-start"
       >
         <a
-          class="flex inline-block py-2 mr-4 text-sm font-bold leading-relaxed text-white uppercase whitespace-no-wrap"
+          class="inline-block py-2 mr-4 text-sm font-bold leading-relaxed text-white uppercase whitespace-no-wrap"
           href="/"
         >
           <g-image
             alt="UPGEO logo"
             src="~/assets/img/upgeo-logo.png"
-            width="200"
+            class="w-40"
+            width="500"
+            quality="100"
           />
         </a>
         <button

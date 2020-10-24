@@ -91,7 +91,7 @@
             </div>
             <div class="w-full px-4 ml-auto mr-auto md:w-4/12">
               <div
-                class="relative flex flex-col w-full min-w-0 mt-6 mb-6 break-words bg-white bg-orange-600 rounded-lg shadow-lg"
+                class="relative flex flex-col w-full min-w-0 mt-6 mb-6 break-words bg-orange-600 rounded-lg shadow-lg"
               >
                 <g-image
                   alt="UPGEO Project Sahalin 2"
