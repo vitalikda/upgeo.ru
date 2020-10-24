@@ -1,19 +1,19 @@
 <template>
   <nav
-    class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg"
+    class="absolute top-0 z-50 flex flex-wrap items-center justify-between w-full px-2 py-3 navbar-expand-lg"
     :class="{
       'bg-transparent': !showMenu,
       'transition duration-700 ease-in bg-gray-900': showMenu,
     }"
   >
     <div
-      class="container px-4 mx-auto flex flex-wrap items-center justify-between"
+      class="container flex flex-wrap items-center justify-between px-4 mx-auto"
     >
       <div
-        class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
+        class="relative flex justify-between w-full lg:w-auto lg:static lg:block lg:justify-start"
       >
         <a
-          class="flex text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white"
+          class="flex inline-block py-2 mr-4 text-sm font-bold leading-relaxed text-white uppercase whitespace-no-wrap"
           href="/"
         >
           <g-image
@@ -23,7 +23,7 @@
           />
         </a>
         <button
-          class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+          class="block px-3 py-1 text-xl leading-none bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer lg:hidden focus:outline-none"
           type="button"
           v-on:click="toggleNavbar()"
         >
@@ -31,16 +31,16 @@
         </button>
       </div>
       <div
-        class="my-4 lg:flex flex-grow items-center lg:bg-transparent lg:shadow-none sm:-translate-y-6"
+        class="items-center flex-grow my-4 lg:flex lg:bg-transparent lg:shadow-none sm:-translate-y-6"
         :class="{
           hidden: !showMenu,
           'animate_bounce block': showMenu,
         }"
       >
-        <ul class="flex flex-col lg:flex-row list-none ml-auto">
+        <ul class="flex flex-col ml-auto list-none lg:flex-row">
           <li class="nav-item">
             <g-link
-              class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:text-orange-500"
+              class="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:text-orange-500"
               to="/"
             >
               О компании
@@ -48,7 +48,7 @@
           </li>
           <li class="nav-item">
             <g-link
-              class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:text-orange-500"
+              class="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:text-orange-500"
               to="/services/"
             >
               Услуги
@@ -56,7 +56,7 @@
           </li>
           <li class="nav-item">
             <g-link
-              class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:text-orange-500"
+              class="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:text-orange-500"
               to="/projects/"
             >
               Проекты
@@ -64,7 +64,7 @@
           </li>
           <li class="nav-item">
             <a
-              class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:text-orange-500"
+              class="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:text-orange-500"
               href="/#contacts"
             >
               Контакты

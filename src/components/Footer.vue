@@ -1,31 +1,31 @@
 <template>
-  <footer class="relative bg-gray-300 pt-8 pb-6">
-    <div class="container mx-auto px-4">
+  <footer class="relative pt-8 pb-6 bg-gray-300">
+    <div class="container px-4 mx-auto">
       <div class="flex flex-wrap">
-        <div class="w-full md:w-5/12 px-4 mr-auto">
+        <div class="w-full px-4 mr-auto md:w-5/12">
           <g-image
             alt="UPGEO logo"
             src="~/assets/img/upgeo-logo-dark.png"
             class="w-full py-2"
             width="300"
           />
-          <h5 class="text-md mt-0 py-2 text-gray-700">
+          <h5 class="py-2 mt-0 text-gray-700 text-md">
             197110, Санкт-Петербург, ул. Ждановская, д.29, оф.13.
           </h5>
         </div>
-        <div class="w-full md:w-5/12 px-4">
-          <div class="flex flex-wrap items-top mb-6">
+        <div class="w-full px-4 md:w-5/12">
+          <div class="flex flex-wrap mb-6 items-top">
             <div
-              class="w-full md:w-6/12 xl:w-4/12 pt-6 md:pt-0 md:px-4 ml-auto"
+              class="w-full pt-6 ml-auto md:w-6/12 xl:w-4/12 md:pt-0 md:px-4"
             >
               <span
-                class="block uppercase text-gray-600 text-sm font-semibold mb-2"
+                class="block mb-2 text-sm font-semibold text-gray-600 uppercase"
                 >Навигация</span
               >
               <ul class="list-unstyled">
                 <li>
                   <g-link
-                    class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                    class="block pb-2 text-sm font-semibold text-gray-700 hover:text-gray-900"
                     to="/"
                   >
                     О Компании
@@ -33,7 +33,7 @@
                 </li>
                 <li>
                   <g-link
-                    class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                    class="block pb-2 text-sm font-semibold text-gray-700 hover:text-gray-900"
                     to="/services/"
                   >
                     Услуги
@@ -41,7 +41,7 @@
                 </li>
                 <li>
                   <g-link
-                    class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                    class="block pb-2 text-sm font-semibold text-gray-700 hover:text-gray-900"
                     to="/projects/"
                   >
                     Проекты
@@ -50,16 +50,16 @@
               </ul>
             </div>
             <div
-              class="w-full md:w-6/12 xl:w-4/12 pt-6 md:pt-0 md:px-4 ml-auto"
+              class="w-full pt-6 ml-auto md:w-6/12 xl:w-4/12 md:pt-0 md:px-4"
             >
               <span
-                class="block uppercase text-gray-600 text-sm font-semibold mb-2"
+                class="block mb-2 text-sm font-semibold text-gray-600 uppercase"
                 >Контакты</span
               >
               <ul class="list-unstyled">
                 <li>
                   <g-link
-                    class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                    class="block pb-2 text-sm font-semibold text-gray-700 hover:text-gray-900"
                     to="/"
                   >
                     www.upgeo.ru
@@ -67,7 +67,7 @@
                 </li>
                 <li>
                   <a
-                    class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                    class="block pb-2 text-sm font-semibold text-gray-700 hover:text-gray-900"
                     href="tel:+78126681277"
                   >
                     (812) 66-812-77
@@ -75,7 +75,7 @@
                 </li>
                 <li>
                   <a
-                    class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                    class="block pb-2 text-sm font-semibold text-gray-700 hover:text-gray-900"
                     href="mailto:office@upgeo.ru"
                   >
                     office@upgeo.ru
@@ -88,10 +88,10 @@
       </div>
       <hr class="my-6 border-gray-400" />
       <div
-        class="flex flex-wrap items-center md:justify-between justify-center"
+        class="flex flex-wrap items-center justify-center md:justify-between"
       >
-        <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-          <div class="text-sm text-gray-600 font-semibold py-1">
+        <div class="w-full px-4 mx-auto text-center md:w-4/12">
+          <div class="py-1 text-sm font-semibold text-gray-600">
             <p>Copyright © {{ date }} UPGEO LLC.</p>
             <span class="text-xs">
               Website built by

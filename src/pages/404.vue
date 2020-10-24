@@ -1,26 +1,26 @@
 <template>
   <Layout>
     <div
-      class="relative pt-16 pb-32 flex content-center items-center justify-center"
+      class="relative flex items-center content-center justify-center pt-16 pb-32"
       style="min-height: 75vh;"
     >
-      <div class="absolute top-0 w-full h-full bg-center bg-cover bg-gray-900">
+      <div class="absolute top-0 w-full h-full bg-gray-900 bg-center bg-cover">
         <span
           id="blackOverlay"
-          class="w-full h-full absolute opacity-75 bg-black"
+          class="absolute w-full h-full bg-black opacity-75"
         ></span>
       </div>
       <div class="container relative mx-auto">
-        <div class="items-center flex flex-wrap">
-          <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+        <div class="flex flex-wrap items-center">
+          <div class="w-full px-4 ml-auto mr-auto text-center lg:w-6/12">
             <div class="pt-32 sm:pt-0">
               <small class="text-orange-500 uppercase">Ошибка 404</small>
-              <h3 class="text-white text-2xl mb-2 font-semibold leading-normal">
+              <h3 class="mb-2 text-2xl font-semibold leading-normal text-white">
                 Приносим наши извинения, но данная страница не существует...
               </h3>
               <g-link
                 to="/"
-                class="inline-block mt-8 bg-transparent hover:bg-orange-500 text-orange-600 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent"
+                class="inline-block px-4 py-2 mt-8 font-semibold text-orange-600 bg-transparent border border-orange-500 hover:bg-orange-500 hover:text-white hover:border-transparent"
               >
                 Вернуться на Главную
               </g-link>

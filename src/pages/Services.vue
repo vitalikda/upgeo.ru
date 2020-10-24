@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div
-      class="relative pt-16 pb-32 flex content-center items-center justify-center"
+      class="relative flex items-center content-center justify-center pt-16 pb-32"
       style="min-height: 50vh;"
     >
       <div
@@ -13,15 +13,15 @@
       >
         <span
           id="blackOverlay"
-          class="w-full h-full absolute opacity-75 bg-black"
+          class="absolute w-full h-full bg-black opacity-75"
         ></span>
       </div>
       <div class="container relative mx-auto">
-        <div class="items-center flex flex-wrap">
-          <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+        <div class="flex flex-wrap items-center">
+          <div class="w-full px-4 ml-auto mr-auto text-center lg:w-6/12">
             <div class="pt-32 sm:pt-0">
               <small class="text-orange-500 uppercase">НАШИ УСЛУГИ</small>
-              <h3 class="text-white text-2xl mb-2 font-semibold leading-normal">
+              <h3 class="mb-2 text-2xl font-semibold leading-normal text-white">
                 Быть лучшими в сфере строительства и проектирования
               </h3>
             </div>
@@ -29,7 +29,7 @@
         </div>
       </div>
       <div
-        class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+        class="absolute bottom-0 left-0 right-0 top-auto w-full overflow-hidden pointer-events-none"
         style="height: 70px; transform: translateZ(0px);"
       >
         <svg
