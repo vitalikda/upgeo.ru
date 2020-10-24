@@ -13,5 +13,11 @@ module.exports = {
     {
       use: 'gridsome-plugin-tailwindcss',
     },
+    {
+      use: '@gridsome/plugin-sitemap',
+    },
+    {
+      use: 'gridsome-plugin-robots-txt',
+    },
   ],
 };
