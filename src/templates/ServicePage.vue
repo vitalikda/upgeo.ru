@@ -71,19 +71,19 @@ export default {
   components: {},
   metaInfo() {
     return {
-      title: this.$page.project.title,
+      title: this.$page.service.title,
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           key: 'description',
           name: 'description',
-          content: this.$page.project.description,
+          content: this.$page.service.description,
         },
         {
           name: 'og:title',
           property: 'og:title',
-          content: this.$page.project.title,
+          content: this.$page.service.title,
         },
       ],
     };
