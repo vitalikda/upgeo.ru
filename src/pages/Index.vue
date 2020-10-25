@@ -653,7 +653,9 @@ export default {
         },
         {
           property: 'og:image',
-          content: this.$page.project.featuredImage.src || '',
+          content:
+            this.$page.metadata.siteUrl +
+              this.$page.project.featuredImage.src || '',
         },
         {
           property: 'og:description',
@@ -676,7 +678,9 @@ export default {
         },
         {
           name: 'twitter:image:src',
-          content: this.$page.project.featuredImage.src || '',
+          content:
+            this.$page.metadata.siteUrl +
+              this.$page.project.featuredImage.src || '',
         },
         { itemprop: 'name', content: this.title },
         {
@@ -685,7 +689,9 @@ export default {
         },
         {
           itemprop: 'image',
-          content: this.$page.project.featuredImage.src || '',
+          content:
+            this.$page.metadata.siteUrl +
+              this.$page.project.featuredImage.src || '',
         },
       ],
     };

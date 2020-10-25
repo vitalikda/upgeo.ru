@@ -114,7 +114,9 @@ export default {
         },
         {
           property: 'og:image',
-          content: require('~/assets/img/upgeo-logo-dark.png'),
+          content:
+            this.$page.metadata.siteUrl +
+            require('~/assets/img/upgeo-logo-dark.png'),
         },
         {
           property: 'og:description',
@@ -137,7 +139,9 @@ export default {
         },
         {
           name: 'twitter:image:src',
-          content: require('~/assets/img/upgeo-logo-dark.png'),
+          content:
+            this.$page.metadata.siteUrl +
+            require('~/assets/img/upgeo-logo-dark.png'),
         },
         { itemprop: 'name', content: this.title },
         {
@@ -146,7 +150,9 @@ export default {
         },
         {
           itemprop: 'image',
-          content: require('~/assets/img/upgeo-logo-dark.png'),
+          content:
+            this.$page.metadata.siteUrl +
+            require('~/assets/img/upgeo-logo-dark.png'),
         },
       ],
     };

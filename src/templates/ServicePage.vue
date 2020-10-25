@@ -85,10 +85,6 @@ export default {
     return {
       title: this.$page.service.title,
       meta: [
-        {
-          name: 'description',
-          content: this.$page.service.description,
-        },
         { property: 'og:title', content: this.$page.service.title },
         { property: 'og:site_name', content: this.$page.metadata.siteName },
         { property: 'og:type', content: 'website' },
@@ -98,7 +94,9 @@ export default {
         },
         {
           property: 'og:image',
-          content: this.$page.service.featuredImage.src || '',
+          content:
+            this.$page.metadata.siteUrl +
+              this.$page.service.featuredImage.src || '',
         },
         {
           property: 'og:description',
@@ -121,7 +119,9 @@ export default {
         },
         {
           name: 'twitter:image:src',
-          content: this.$page.service.featuredImage.src || '',
+          content:
+            this.$page.metadata.siteUrl +
+              this.$page.service.featuredImage.src || '',
         },
         { itemprop: 'name', content: this.$page.service.title },
         {
@@ -130,7 +130,9 @@ export default {
         },
         {
           itemprop: 'image',
-          content: this.$page.service.featuredImage.src || '',
+          content:
+            this.$page.metadata.siteUrl +
+              this.$page.service.featuredImage.src || '',
         },
       ],
     };
