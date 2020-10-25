@@ -8,6 +8,7 @@
           <g-image
             class="absolute top-0 object-cover w-full h-full"
             src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80"
+            :alt="this.title"
           >
           </g-image>
           <span class="absolute w-full h-full bg-black opacity-75"></span>
@@ -643,10 +644,6 @@ export default {
     return {
       title: this.title,
       meta: [
-        {
-          name: 'description',
-          content: this.$page.metadata.siteDescription,
-        },
         { property: 'og:title', content: this.title },
         { property: 'og:site_name', content: this.$page.metadata.siteName },
         { property: 'og:type', content: 'website' },

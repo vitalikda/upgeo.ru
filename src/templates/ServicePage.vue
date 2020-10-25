@@ -7,6 +7,7 @@
         <g-image
           class="absolute top-0 object-cover w-full h-full"
           :src="$page.service.featuredImage.src"
+          :alt="$page.service.title"
         >
         </g-image>
         <span

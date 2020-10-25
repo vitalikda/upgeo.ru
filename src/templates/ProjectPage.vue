@@ -7,6 +7,7 @@
         <g-image
           class="absolute top-0 object-cover w-full h-full"
           :src="$page.project.featuredImage.src"
+          :alt="$page.project.title"
         >
         </g-image>
         <span class="absolute w-full h-full bg-black opacity-75"></span>
