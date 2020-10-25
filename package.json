@@ -18,6 +18,7 @@
     "@gridsome/transformer-remark": "^0.6.3",
     "@noxify/gridsome-remark-classes": "^1.0.0",
     "gridsome-plugin-robots-txt": "^1.0.2",
-    "gridsome-plugin-tailwindcss": "^3.0.1"
+    "gridsome-plugin-tailwindcss": "^3.0.1",
+    "webpack-bundle-analyzer": "^3.9.0"
   }
 }
