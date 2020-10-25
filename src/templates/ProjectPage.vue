@@ -60,6 +60,11 @@
 
 <page-query>
 query($id: ID!) {
+  metadata {
+    siteName
+    siteDescription
+    siteUrl
+  }
   project: projectPage(id: $id) {
     title
     description
@@ -77,14 +82,51 @@ export default {
       title: this.$page.project.title,
       meta: [
         {
-          key: 'description',
           name: 'description',
           content: this.$page.project.description,
         },
+        { property: 'og:title', content: this.$page.project.title },
+        { property: 'og:site_name', content: this.$page.metadata.siteName },
+        { property: 'og:type', content: 'website' },
         {
-          name: 'og:title',
-          property: 'og:title',
-          content: this.$page.project.title,
+          property: 'og:url',
+          content: this.$page.metadata.siteUrl + this.$router.currentRoute.path,
+        },
+        {
+          property: 'og:image',
+          content: this.$page.project.featuredImage.src || '',
+        },
+        {
+          property: 'og:description',
+          content: this.$page.project.description,
+        },
+        {
+          name: 'twitter:card',
+          content: this.$page.project.featuredImage.src
+            ? 'summary_large_image'
+            : 'summary',
+        },
+        {
+          name: 'twitter:site',
+          content: this.$page.metadata.siteUrl + this.$router.currentRoute.path,
+        },
+        { name: 'twitter:title', content: this.$page.project.title },
+        {
+          name: 'twitter:description',
+          content: this.$page.project.description,
+        },
+        {
+          name: 'twitter:image:src',
+          content: this.$page.project.featuredImage.src || '',
+        },
+        { itemprop: 'name', content: this.$page.project.title },
+        {
+          itemprop: 'description',
+          content: this.$page.project.description,
+        },
+        {
+          itemprop: 'image',
+          content: this.$page.project.featuredImage.src || '',
         },
       ],
     };

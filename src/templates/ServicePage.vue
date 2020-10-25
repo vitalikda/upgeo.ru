@@ -63,6 +63,11 @@
 
 <page-query>
 query($id: ID!) {
+  metadata {
+    siteName
+    siteDescription
+    siteUrl
+  }
   service: servicePage(id: $id) {
     title
     description
@@ -80,14 +85,51 @@ export default {
       title: this.$page.service.title,
       meta: [
         {
-          key: 'description',
           name: 'description',
           content: this.$page.service.description,
         },
+        { property: 'og:title', content: this.$page.service.title },
+        { property: 'og:site_name', content: this.$page.metadata.siteName },
+        { property: 'og:type', content: 'website' },
         {
-          name: 'og:title',
-          property: 'og:title',
-          content: this.$page.service.title,
+          property: 'og:url',
+          content: this.$page.metadata.siteUrl + this.$router.currentRoute.path,
+        },
+        {
+          property: 'og:image',
+          content: this.$page.service.featuredImage.src || '',
+        },
+        {
+          property: 'og:description',
+          content: this.$page.service.description,
+        },
+        {
+          name: 'twitter:card',
+          content: this.$page.service.featuredImage.src
+            ? 'summary_large_image'
+            : 'summary',
+        },
+        {
+          name: 'twitter:site',
+          content: this.$page.metadata.siteUrl + this.$router.currentRoute.path,
+        },
+        { name: 'twitter:title', content: this.$page.service.title },
+        {
+          name: 'twitter:description',
+          content: this.$page.service.description,
+        },
+        {
+          name: 'twitter:image:src',
+          content: this.$page.service.featuredImage.src || '',
+        },
+        { itemprop: 'name', content: this.$page.service.title },
+        {
+          itemprop: 'description',
+          content: this.$page.service.description,
+        },
+        {
+          itemprop: 'image',
+          content: this.$page.service.featuredImage.src || '',
         },
       ],
     };

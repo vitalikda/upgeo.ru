@@ -71,6 +71,11 @@
 
 <page-query>
 query {
+  metadata {
+    siteName
+    siteDescription
+    siteUrl
+  }
   services: allServicePage(sortBy: "date", order: ASC) {
     edges {
       node {        
@@ -98,6 +103,55 @@ export default {
   metaInfo() {
     return {
       title: this.title,
+      meta: [
+        {
+          name: 'description',
+          content: this.description,
+        },
+        { property: 'og:title', content: this.title },
+        { property: 'og:site_name', content: this.$page.metadata.siteName },
+        { property: 'og:type', content: 'website' },
+        {
+          property: 'og:url',
+          content: this.$page.metadata.siteUrl + this.$router.currentRoute.path,
+        },
+        {
+          property: 'og:image',
+          content: require('~/assets/img/upgeo-logo-dark.png'),
+        },
+        {
+          property: 'og:description',
+          content: this.description,
+        },
+        {
+          name: 'twitter:card',
+          content: require('~/assets/img/upgeo-logo-dark.png')
+            ? 'summary_large_image'
+            : 'summary',
+        },
+        {
+          name: 'twitter:site',
+          content: this.$page.metadata.siteUrl + this.$router.currentRoute.path,
+        },
+        { name: 'twitter:title', content: this.title },
+        {
+          name: 'twitter:description',
+          content: this.description,
+        },
+        {
+          name: 'twitter:image:src',
+          content: require('~/assets/img/upgeo-logo-dark.png'),
+        },
+        { itemprop: 'name', content: this.title },
+        {
+          itemprop: 'description',
+          content: this.description,
+        },
+        {
+          itemprop: 'image',
+          content: require('~/assets/img/upgeo-logo-dark.png'),
+        },
+      ],
     };
   },
 };

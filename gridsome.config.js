@@ -8,8 +8,19 @@ module.exports = {
   siteName: 'UPGEO',
   siteDescription:
     'Широкий спектр топографо-геодезических услуг и инженерных изысканий в сфере строительства и проектирования',
-  siteUrl: 'http://upgeo.ru',
+  siteUrl: 'https://upgeo.ru',
   icon: './src/assets/favicon.png',
+  metaInfo: {
+    meta: [
+      { 'http-equiv': 'Content-Type', content: 'text/html; charset=utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        name: 'keywords',
+        content:
+          'геодезическое сопровождение, топографо-геодезические услуги, строительство, проектирование, инженерные изыскания',
+      },
+    ],
+  },
 
   plugins: [
     {

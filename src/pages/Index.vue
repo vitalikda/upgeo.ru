@@ -611,6 +611,11 @@
 
 <page-query>
 query {
+  metadata {
+    siteName
+    siteDescription
+    siteUrl
+  }
   project: projectPage(id: "a248008bee0c9340139b3d890830be12") {
     title
     path
@@ -637,6 +642,55 @@ export default {
   metaInfo() {
     return {
       title: this.title,
+      meta: [
+        {
+          name: 'description',
+          content: this.$page.metadata.siteDescription,
+        },
+        { property: 'og:title', content: this.title },
+        { property: 'og:site_name', content: this.$page.metadata.siteName },
+        { property: 'og:type', content: 'website' },
+        {
+          property: 'og:url',
+          content: this.$page.metadata.siteUrl + this.$router.currentRoute.path,
+        },
+        {
+          property: 'og:image',
+          content: this.$page.project.featuredImage.src || '',
+        },
+        {
+          property: 'og:description',
+          content: this.$page.metadata.siteDescription,
+        },
+        {
+          name: 'twitter:card',
+          content: this.$page.project.featuredImage.src
+            ? 'summary_large_image'
+            : 'summary',
+        },
+        {
+          name: 'twitter:site',
+          content: this.$page.metadata.siteUrl + this.$router.currentRoute.path,
+        },
+        { name: 'twitter:title', content: this.title },
+        {
+          name: 'twitter:description',
+          content: this.$page.metadata.siteDescription,
+        },
+        {
+          name: 'twitter:image:src',
+          content: this.$page.project.featuredImage.src || '',
+        },
+        { itemprop: 'name', content: this.title },
+        {
+          itemprop: 'description',
+          content: this.$page.metadata.siteDescription,
+        },
+        {
+          itemprop: 'image',
+          content: this.$page.project.featuredImage.src || '',
+        },
+      ],
     };
   },
   methods: {
