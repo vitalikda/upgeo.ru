@@ -61,6 +61,7 @@ query($id: ID!) {
   service: servicePage(id: $id) {
     title
     description
+    featuredImage(quality: 90)
     content
   }
 }

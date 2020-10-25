@@ -620,7 +620,7 @@ query {
     title
     path
     description
-    featuredImage
+    featuredImage(width: 350)
     content
   }
 }

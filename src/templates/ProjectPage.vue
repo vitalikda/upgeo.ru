@@ -66,7 +66,7 @@ query($id: ID!) {
   project: projectPage(id: $id) {
     title
     description
-    featuredImage (quality: 90)
+    featuredImage(quality: 90)
     content
   }
 }
