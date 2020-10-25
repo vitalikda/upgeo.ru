@@ -2,7 +2,12 @@ module.exports = {
   future: {
     purgeLayersByDefault: true,
   },
-  purge: ['./src/**/*.html', './src/**/*.vue', './src/**/*.jsx'],
+  purge: {
+    content: ['./src/**/*.html', './src/**/*.vue', './src/**/*.jsx'],
+    options: {
+      whitelist: ['list-disc', 'list-inside'],
+    },
+  },
   theme: {},
   variants: {},
   plugins: [],
