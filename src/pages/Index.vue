@@ -18,9 +18,9 @@
           <div class="flex flex-wrap items-center">
             <div class="w-full px-4 ml-auto mr-auto text-center lg:w-6/12">
               <div class="pt-32 sm:pt-0">
-                <h2 class="text-4xl font-semibold text-white">
+                <h1 class="text-4xl font-semibold text-white">
                   Геодезическое сопровождение
-                </h2>
+                </h1>
                 <p class="mt-4 text-lg leading-relaxed text-gray-300">
                   Широкий спектр топографо-геодезических услуг и инженерных
                   изысканий.

@@ -15,9 +15,9 @@
           <div class="w-full px-4 ml-auto mr-auto text-center lg:w-6/12">
             <div class="pt-32 sm:pt-0">
               <small class="text-orange-500 uppercase">Ошибка 404</small>
-              <h3 class="mb-2 text-2xl font-semibold leading-normal text-white">
+              <h1 class="mb-2 text-2xl font-semibold leading-normal text-white">
                 Приносим наши извинения, но данная страница не существует...
-              </h3>
+              </h1>
               <g-link
                 to="/"
                 class="inline-block px-4 py-2 mt-8 font-semibold text-orange-600 bg-transparent border border-orange-500 hover:bg-orange-500 hover:text-white hover:border-transparent"
