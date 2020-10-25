@@ -19,11 +19,10 @@
             <div class="w-full px-4 ml-auto mr-auto text-center lg:w-6/12">
               <div class="pt-32 sm:pt-0">
                 <h1 class="text-4xl font-semibold text-white">
-                  Геодезическое сопровождение
+                  {{ this.title }}
                 </h1>
                 <p class="mt-4 text-lg leading-relaxed text-gray-300">
-                  Широкий спектр топографо-геодезических услуг и инженерных
-                  изысканий.
+                  {{ this.description }}
                 </p>
                 <g-link
                   to="/services/"
@@ -90,38 +89,12 @@
               </g-link>
             </div>
             <div class="w-full px-4 ml-auto mr-auto md:w-4/12">
-              <div
-                class="relative flex flex-col w-full min-w-0 mt-6 mb-6 break-words bg-orange-600 rounded-lg shadow-lg"
-              >
-                <g-image
-                  alt="UPGEO Project Sahalin 2"
-                  src="~/assets/img/Project-Sahalin-2.jpg"
-                  class="w-full align-middle rounded-t-lg"
-                  width="500"
-                />
-                <blockquote class="relative p-8 mb-4">
-                  <svg
-                    preserveAspectRatio="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 583 95"
-                    class="absolute left-0 block w-full"
-                    style="height: 95px; top: -94px;"
-                  >
-                    <polygon
-                      points="-30,95 583,95 583,65"
-                      class="text-orange-600 fill-current"
-                    ></polygon>
-                  </svg>
-                  <h4 class="text-xl font-bold text-white">
-                    о. Сахалин
-                  </h4>
-                  <p class="mt-2 font-light text-white text-md">
-                    Например, мы участвовали в строительстве первого в России
-                    бетонного основания гравитационного типа для шельфа на о.
-                    Сахалин.
-                  </p>
-                </blockquote>
-              </div>
+              <card-component
+                :title="$page.project.title"
+                :description="$page.project.description"
+                :path="$page.project.path"
+                :image="$page.project.featuredImage.src"
+              ></card-component>
             </div>
           </div>
         </div>
@@ -641,14 +614,34 @@
   </Layout>
 </template>
 
+<page-query>
+query {
+  project: projectPage(id: "a248008bee0c9340139b3d890830be12") {
+    title
+    path
+    description
+    featuredImage
+    content
+  }
+}
+</page-query>
+
 <script>
+import CardComponent from '~/components/Card';
+
 export default {
-  metaInfo: {
-    title: 'Геодезическое сопровождение',
-  },
+  components: { CardComponent },
   data() {
     return {
+      title: 'Геодезическое сопровождение',
+      description:
+        'Широкий спектр топографо-геодезических услуг и инженерных изысканий',
       formData: {},
+    };
+  },
+  metaInfo() {
+    return {
+      title: this.title,
     };
   },
   methods: {
