@@ -1,15 +1,17 @@
 <template>
   <Layout>
     <div
-      class="relative flex items-center content-center justify-center pt-16 pb-32"
-      style="min-height: 75vh;"
+      class="relative flex items-center content-center justify-center pt-16 pb-32 min-h-3/4"
     >
-      <div class="absolute top-0 w-full h-full bg-gray-900 bg-center bg-cover">
-        <span
-          id="blackOverlay"
-          class="absolute w-full h-full bg-black opacity-75"
-        ></span>
+      <div class="absolute top-0 w-full h-full bg-white">
+        <g-image
+          class="absolute top-0 object-cover w-full h-full"
+          src="../assets/img/services.jpg"
+        >
+        </g-image>
+        <span class="absolute w-full h-full bg-black opacity-75"></span>
       </div>
+
       <div class="container relative mx-auto">
         <div class="flex flex-wrap items-center">
           <div class="w-full px-4 ml-auto mr-auto text-center lg:w-6/12">

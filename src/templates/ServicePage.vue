@@ -1,15 +1,20 @@
 <template>
   <Layout>
     <div
-      class="relative flex items-center content-center justify-center pt-16 pb-32"
-      style="min-height: 75vh;"
+      class="relative flex items-center content-center justify-center pt-16 pb-32 min-h-3/4"
     >
-      <div class="absolute top-0 w-full h-full bg-gray-500 bg-center bg-cover">
+      <div class="absolute top-0 w-full h-full bg-white">
+        <g-image
+          class="absolute top-0 object-cover w-full h-full"
+          :src="$page.service.featuredImage.src"
+        >
+        </g-image>
         <span
           id="blackOverlay"
           class="absolute w-full h-full bg-black opacity-75"
         ></span>
       </div>
+
       <div class="container relative mx-auto">
         <div class="flex flex-wrap items-center">
           <div class="w-full px-4 ml-auto mr-auto text-center lg:w-6/12">
@@ -74,8 +79,6 @@ export default {
     return {
       title: this.$page.service.title,
       meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           key: 'description',
           name: 'description',

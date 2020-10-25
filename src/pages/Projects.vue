@@ -1,18 +1,17 @@
 <template>
   <Layout>
     <div
-      class="relative flex items-center content-center justify-center pt-16 pb-32"
-      style="min-height: 75vh;"
+      class="relative flex items-center content-center justify-center pt-16 pb-32 min-h-3/4"
     >
-      <div
-        class="absolute top-0 w-full h-full bg-center bg-cover"
-        style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80');"
-      >
-        <span
-          id="blackOverlay"
-          class="absolute w-full h-full bg-black opacity-75"
-        ></span>
+      <div class="absolute top-0 w-full h-full bg-white">
+        <g-image
+          class="absolute top-0 object-cover w-full h-full"
+          src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
+        >
+        </g-image>
+        <span class="absolute w-full h-full bg-black opacity-75"></span>
       </div>
+
       <div class="container relative mx-auto">
         <div class="flex flex-wrap items-center">
           <div class="w-full px-4 ml-auto mr-auto text-center lg:w-6/12">

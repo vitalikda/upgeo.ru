@@ -2,18 +2,17 @@
   <Layout>
     <main>
       <div
-        class="relative flex items-center content-center justify-center pt-16 pb-32"
-        style="min-height: 75vh;"
+        class="relative flex items-center content-center justify-center pt-16 pb-32 min-h-3/4"
       >
-        <div
-          class="absolute top-0 w-full h-full bg-center bg-cover"
-          style='background-image: url("https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80");'
-        >
-          <span
-            id="blackOverlay"
-            class="absolute w-full h-full bg-black opacity-75"
-          ></span>
+        <div class="absolute top-0 w-full h-full bg-gray-300">
+          <g-image
+            class="absolute top-0 object-cover w-full h-full"
+            src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80"
+          >
+          </g-image>
+          <span class="absolute w-full h-full bg-black opacity-75"></span>
         </div>
+
         <div class="container relative mx-auto">
           <div class="flex flex-wrap items-center">
             <div class="w-full px-4 ml-auto mr-auto text-center lg:w-6/12">
@@ -26,7 +25,7 @@
                 </p>
                 <g-link
                   to="/services/"
-                  class="inline-block px-4 py-2 mt-8 font-semibold text-orange-600 bg-transparent border border-orange-500 hover:bg-orange-500 hover:text-white hover:border-transparent"
+                  class="inline-block px-4 py-2 mt-8 font-semibold text-orange-600 transition duration-500 ease-out bg-transparent border border-orange-500 hover:bg-orange-500 hover:text-white hover:border-transparent"
                 >
                   Все наши услуги
                 </g-link>
@@ -79,7 +78,7 @@
               </p>
               <g-link
                 to="/projects/"
-                class="inline-block mb-8 font-semibold text-orange-600 hover:opacity-75"
+                class="inline-block mb-8 font-semibold text-orange-600 transition duration-500 ease-out hover:opacity-75"
               >
                 Все наши проекты
                 <font-awesome-icon
@@ -244,8 +243,7 @@
                 </ul>
                 <g-link
                   to="/services/"
-                  class="font-bold text-gray-800 hover:text-gray-600"
-                  style="transition:all .15s ease"
+                  class="font-bold text-gray-800 transition duration-500 ease-out hover:text-gray-600"
                   >Посмотреть наши услуги
                   <font-awesome-icon
                     :icon="['fas', 'angle-double-right']"
@@ -275,8 +273,8 @@
                   alt="Nokian Tyres logo"
                   src="~/assets/img/Logo-Nokian-Tyres.jpg"
                   class="max-w-full mx-auto"
-                  style="max-width: 120px;"
-                  width="250"
+                  width="120"
+                  quality="90"
                 />
               </div>
             </div>
@@ -286,8 +284,8 @@
                   alt="Bonava logo"
                   src="~/assets/img/Logo-Bonava.jpg"
                   class="max-w-full mx-auto"
-                  style="max-width: 120px;"
-                  width="250"
+                  width="120"
+                  quality="90"
                 />
               </div>
             </div>
@@ -297,8 +295,8 @@
                   alt="Балтийский терминал удобрений логотип"
                   src="~/assets/img/Logo-BFT.jpg"
                   class="max-w-full mx-auto"
-                  style="max-width: 120px;"
-                  width="250"
+                  width="120"
+                  quality="90"
                 />
               </div>
             </div>
@@ -308,8 +306,8 @@
                   alt="StroiGemini logo"
                   src="~/assets/img/Logo-StroiGemini.jpg"
                   class="max-w-full mx-auto"
-                  style="max-width: 120px;"
-                  width="250"
+                  width="120"
+                  quality="90"
                 />
               </div>
             </div>
@@ -319,8 +317,8 @@
                   alt="Kvaerner logo"
                   src="~/assets/img/Logo-Kvaerner.jpg"
                   class="max-w-full mx-auto"
-                  style="max-width: 120px;"
-                  width="250"
+                  width="120"
+                  quality="90"
                 />
               </div>
             </div>
@@ -330,8 +328,8 @@
                   alt="Renaissance logo"
                   src="~/assets/img/Logo-Renaissance.jpg"
                   class="max-w-full mx-auto"
-                  style="max-width: 120px;"
-                  width="250"
+                  width="120"
+                  quality="90"
                 />
               </div>
             </div>
@@ -341,8 +339,8 @@
                   alt="Lemminkainen logo"
                   src="~/assets/img/Logo-Lemminkainen.jpg"
                   class="max-w-full mx-auto"
-                  style="max-width: 120px;"
-                  width="250"
+                  width="120"
+                  quality="90"
                 />
               </div>
             </div>
@@ -352,8 +350,8 @@
                   alt="Hansastroi logo"
                   src="~/assets/img/Logo-Hansastroi.jpg"
                   class="max-w-full mx-auto"
-                  style="max-width: 120px;"
-                  width="250"
+                  width="120"
+                  quality="90"
                 />
               </div>
             </div>
@@ -363,8 +361,8 @@
                   alt="Lenstroytrest logo"
                   src="~/assets/img/Logo-Lenstroytrest.jpg"
                   class="max-w-full mx-auto"
-                  style="max-width: 120px;"
-                  width="250"
+                  width="120"
+                  quality="90"
                 />
               </div>
             </div>
@@ -374,8 +372,8 @@
                   alt="Hochtief logo"
                   src="~/assets/img/Logo-Hochtief.jpg"
                   class="max-w-full mx-auto"
-                  style="max-width: 120px;"
-                  width="250"
+                  width="120"
+                  quality="90"
                 />
               </div>
             </div>
@@ -385,8 +383,8 @@
                   alt="YIT logo"
                   src="~/assets/img/Logo-YIT.jpg"
                   class="max-w-full mx-auto"
-                  style="max-width: 120px;"
-                  width="250"
+                  width="120"
+                  quality="90"
                 />
               </div>
             </div>
@@ -396,8 +394,8 @@
                   alt="SRV logo"
                   src="~/assets/img/Logo-SRV.jpg"
                   class="max-w-full mx-auto"
-                  style="max-width: 120px;"
-                  width="250"
+                  width="120"
+                  quality="90"
                 />
               </div>
             </div>
@@ -407,8 +405,8 @@
                   alt="HplusH logo"
                   src="~/assets/img/Logo-HplusH.jpg"
                   class="max-w-full mx-auto"
-                  style="max-width: 120px;"
-                  width="250"
+                  width="120"
+                  quality="90"
                 />
               </div>
             </div>
@@ -536,8 +534,7 @@
                         name="name"
                         v-model="formData.name"
                         placeholder="Фамилия Имя"
-                        class="w-full px-3 py-3 text-sm text-gray-700 placeholder-gray-400 bg-white rounded shadow focus:outline-none focus:shadow-outline"
-                        style="transition: all 0.15s ease 0s;"
+                        class="w-full px-3 py-3 text-sm text-gray-700 placeholder-gray-400 transition duration-500 ease-out bg-white rounded shadow focus:outline-none focus:shadow-outline"
                         required
                       />
                     </div>
@@ -553,8 +550,7 @@
                         name="email"
                         v-model="formData.email"
                         placeholder="my@email.com"
-                        class="w-full px-3 py-3 text-sm text-gray-700 placeholder-gray-400 bg-white rounded shadow focus:outline-none focus:shadow-outline"
-                        style="transition: all 0.15s ease 0s;"
+                        class="w-full px-3 py-3 text-sm text-gray-700 placeholder-gray-400 transition duration-500 ease-out bg-white rounded shadow focus:outline-none focus:shadow-outline"
                         required
                       />
                     </div>
@@ -571,15 +567,14 @@
                         placeholder="Ваше сообщение..."
                         rows="4"
                         cols="80"
-                        class="w-full px-3 py-3 text-sm text-gray-700 placeholder-gray-400 bg-white rounded shadow focus:outline-none focus:shadow-outline"
+                        class="w-full px-3 py-3 text-sm text-gray-700 placeholder-gray-400 transition duration-500 ease-out bg-white rounded shadow focus:outline-none focus:shadow-outline"
                         required
                       ></textarea>
                     </div>
                     <div class="mt-6 text-center">
                       <button
                         type="submit"
-                        class="px-6 py-3 mb-1 mr-1 text-sm font-bold text-white uppercase bg-gray-900 shadow outline-none active:bg-gray-700 hover:shadow-lg focus:outline-none"
-                        style="transition: all 0.15s ease 0s;"
+                        class="px-6 py-3 mb-1 mr-1 text-sm font-bold text-white uppercase transition duration-500 ease-out bg-gray-900 shadow outline-none active:bg-gray-700 hover:shadow-lg focus:outline-none"
                       >
                         Отправить
                       </button>
