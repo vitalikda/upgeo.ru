@@ -57,8 +57,9 @@ module.exports = {
       options: {
         contentTypes: ['ProjectPage', 'ServicePage'],
         feedOptions: {
-          title: this.siteName,
-          description: this.siteDescription,
+          title: 'UPGEO',
+          description:
+            'Широкий спектр топографо-геодезических услуг и инженерных изысканий в сфере строительства и проектирования',
         },
         rss: {
           enabled: true,
