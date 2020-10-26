@@ -52,6 +52,28 @@ module.exports = {
     {
       use: 'gridsome-plugin-robots-txt',
     },
+    {
+      use: '@microflash/gridsome-plugin-feed',
+      options: {
+        contentTypes: ['ProjectPage', 'ServicePage'],
+        feedOptions: {
+          title: this.siteName,
+          description: this.siteDescription,
+        },
+        rss: {
+          enabled: true,
+          output: '/feed.xml',
+        },
+        atom: {
+          enabled: true,
+          output: '/feed.atom',
+        },
+        json: {
+          enabled: true,
+          output: '/feed.json',
+        },
+      },
+    },
   ],
 
   transformers: {

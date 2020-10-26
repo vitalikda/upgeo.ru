@@ -5,8 +5,11 @@
 ## Features
 
 - Gridsome
+- Markdown: Services and Projects pages
 - Tailwind CSS
-- Netlify
+- FontAwesome icons
+- Netlify CDN
+- SEO: Meta, Sitemap, Robots.txt, RSS
 
 ## Install
 
