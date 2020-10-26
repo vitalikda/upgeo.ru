@@ -20,6 +20,7 @@
     "@noxify/gridsome-remark-classes": "^1.0.0",
     "gridsome-plugin-robots-txt": "^1.0.2",
     "gridsome-plugin-tailwindcss": "^3.0.1",
+    "marked": "^1.2.2",
     "webpack-bundle-analyzer": "^3.9.0"
   }
 }

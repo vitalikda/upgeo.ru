@@ -4,15 +4,32 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-module.exports = {
-  siteName: 'UPGEO',
-  siteDescription:
+const meta = {
+  url: 'https://upgeo.ru',
+  name: 'UPGEO',
+  description:
     'Широкий спектр топографо-геодезических услуг и инженерных изысканий в сфере строительства и проектирования',
-  siteUrl: 'https://upgeo.ru',
   icon: './src/assets/favicon.png',
+  lang: 'ru',
+  keywords: [
+    'геодезическое сопровождение',
+    'топографо-геодезические услуги',
+    'строительство',
+    'проектирование',
+    'инженерные изыскания',
+  ],
+};
+
+const marked = require('marked');
+
+module.exports = {
+  siteName: meta.name,
+  siteDescription: meta.description,
+  siteUrl: meta.url,
+  icon: meta.icon,
   metaInfo: {
     htmlAttrs: {
-      lang: 'ru',
+      lang: meta.lang,
       amp: true,
     },
     meta: [
@@ -20,8 +37,7 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         name: 'keywords',
-        content:
-          'геодезическое сопровождение, топографо-геодезические услуги, строительство, проектирование, инженерные изыскания',
+        content: meta.keywords,
       },
     ],
   },
@@ -51,28 +67,35 @@ module.exports = {
     },
     {
       use: 'gridsome-plugin-robots-txt',
+      options: {
+        policy: [
+          {
+            userAgent: '*',
+            allow: '/',
+            disallow: ['/404', '/success'],
+          },
+        ],
+      },
     },
     {
       use: '@microflash/gridsome-plugin-feed',
       options: {
         contentTypes: ['ProjectPage', 'ServicePage'],
         feedOptions: {
-          title: 'UPGEO',
-          description:
-            'Широкий спектр топографо-геодезических услуг и инженерных изысканий в сфере строительства и проектирования',
+          title: meta.name,
+          description: meta.description,
+          link: meta.url,
+          favicon: meta.url + '/favicon.ico',
         },
-        rss: {
-          enabled: true,
-          output: '/feed.xml',
-        },
-        atom: {
-          enabled: true,
-          output: '/feed.atom',
-        },
-        json: {
-          enabled: true,
-          output: '/feed.json',
-        },
+        nodeToFeedItem: (node) => ({
+          language: meta.lang,
+          title: node.title,
+          description: node.description,
+          date: new Date(node.date),
+          link: meta.url + node.path,
+          image: meta.url + '/upgeo-logo-horizontal.png',
+          content: marked(node.content),
+        }),
       },
     },
   ],
