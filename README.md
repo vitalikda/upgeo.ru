@@ -11,7 +11,11 @@
 - Netlify CDN
 - SEO: Meta, Sitemap, Robots.txt, RSS
 - Progressive web application (PWA)
-- Google PageSpeed: 98 mobile, 100 desktop 
+- Google PageSpeed: 98 mobile, 100 desktop
+
+### Lighthouse score: 
+
+![Google-Lighthouse-Score](https://user-images.githubusercontent.com/9862028/101992420-265fc800-3cc4-11eb-9d1f-3c37271366e7.png)
 
 ## Install
 
