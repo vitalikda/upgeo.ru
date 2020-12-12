@@ -63,6 +63,51 @@ module.exports = {
       use: 'gridsome-plugin-tailwindcss',
     },
     {
+      use: 'gridsome-plugin-pwa',
+      options: {
+        // Service Worker Options
+        disableServiceWorker: false,
+        serviceWorkerPath: 'service-worker.js',
+        cachedFileTypes: 'js,json,css,html,png,jpg,jpeg,svg,gif',
+        disableTemplatedUrls: false, // Optional
+
+        // Manifest Options (https://developer.mozilla.org/en-US/docs/Web/Manifest)
+        manifestPath: 'manifest.json',
+        title: meta.name,
+        startUrl: '/index.html',
+        display: 'standalone',
+        statusBarStyle: 'default',
+        themeColor: '#DD6B20',
+        backgroundColor: '#ffffff',
+        icon: meta.icon,
+        shortName: meta.name, // Optional
+        description: meta.description, // Optional
+        categories: meta.keywords, // Optional
+        lang: meta.lang, // Optional
+        dir: 'auto', // Optional
+        maskableIcon: true, // Optional
+        screenshots: [
+          // Optional
+          {
+            src: 'upgeo-logo-horizontal.png',
+            sizes: '220x80',
+            type: 'image/png',
+          },
+        ],
+        gcmSenderId: undefined, // Optional
+
+        // Standard Meta Tags
+        svgFavicon: 'favicon.ico', // Optional. Requires favicon.ico fallback
+
+        // Microsoft Windows Meta Tags
+        msTileColor: '#DD6B20', // Optional
+
+        // Apple MacOS Meta Tags
+        appleMaskIcon: 'favicon.ico', // Optional
+        appleMaskIconColor: '#DD6B20', // Optional
+      },
+    },
+    {
       use: '@gridsome/plugin-sitemap',
     },
     {
