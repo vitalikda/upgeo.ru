@@ -1,6 +1,6 @@
 # Business SPA with Gridsome, Tailwind and Netlify
 
-[Live Preview](http://upgeo.ru)
+[Live Preview](https://upgeo.ru)
 
 ## Features
 
@@ -10,7 +10,8 @@
 - FontAwesome icons
 - Netlify CDN
 - SEO: Meta, Sitemap, Robots.txt, RSS
-- PWA
+- Progressive web application (PWA)
+- Google PageSpeed: 98 mobile, 100 desktop 
 
 ## Install
 
