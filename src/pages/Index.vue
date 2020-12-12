@@ -644,8 +644,9 @@ export default {
     return {
       title: this.title,
       meta: [
+        { vmid: 'description', name: 'description', content: this.description },
+        // Open Graph data
         { property: 'og:title', content: this.title },
-        { property: 'og:site_name', content: this.$page.metadata.siteName },
         { property: 'og:type', content: 'website' },
         {
           property: 'og:url',
@@ -655,44 +656,14 @@ export default {
           property: 'og:image',
           content:
             this.$page.metadata.siteUrl +
-              this.$page.project.featuredImage.src || '',
+            (this.$page.project.featuredImage.src ||
+              '/upgeo-logo-horizontal.png'),
         },
         {
           property: 'og:description',
           content: this.description,
         },
-        {
-          name: 'twitter:card',
-          content: this.$page.project.featuredImage.src
-            ? 'summary_large_image'
-            : 'summary',
-        },
-        {
-          name: 'twitter:site',
-          content: this.$page.metadata.siteUrl + this.$router.currentRoute.path,
-        },
-        { name: 'twitter:title', content: this.title },
-        {
-          name: 'twitter:description',
-          content: this.description,
-        },
-        {
-          name: 'twitter:image:src',
-          content:
-            this.$page.metadata.siteUrl +
-              this.$page.project.featuredImage.src || '',
-        },
-        { itemprop: 'name', content: this.title },
-        {
-          itemprop: 'description',
-          content: this.description,
-        },
-        {
-          itemprop: 'image',
-          content:
-            this.$page.metadata.siteUrl +
-              this.$page.project.featuredImage.src || '',
-        },
+        { property: 'og:site_name', content: this.$page.metadata.siteName },
       ],
     };
   },

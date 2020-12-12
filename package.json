@@ -7,8 +7,7 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "gridsome": "^0.7.0",
-    "gridsome-plugin-pwa": "^0.0.18"
+    "gridsome": "^0.7.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
@@ -19,6 +18,7 @@
     "@gridsome/transformer-remark": "^0.6.3",
     "@microflash/gridsome-plugin-feed": "^1.1.7",
     "@noxify/gridsome-remark-classes": "^1.0.0",
+    "gridsome-plugin-pwa": "^0.0.18",
     "gridsome-plugin-robots-txt": "^1.0.2",
     "gridsome-plugin-tailwindcss": "^3.0.1",
     "marked": "^1.2.2",

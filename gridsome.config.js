@@ -74,7 +74,7 @@ module.exports = {
         // Manifest Options (https://developer.mozilla.org/en-US/docs/Web/Manifest)
         manifestPath: 'manifest.json',
         title: meta.name,
-        startUrl: '/index.html',
+        startUrl: '/',
         display: 'standalone',
         statusBarStyle: 'default',
         themeColor: '#DD6B20',
@@ -89,7 +89,7 @@ module.exports = {
         screenshots: [
           // Optional
           {
-            src: 'upgeo-logo-horizontal.png',
+            src: '/upgeo-logo-horizontal.png',
             sizes: '220x80',
             type: 'image/png',
           },
@@ -97,13 +97,13 @@ module.exports = {
         gcmSenderId: undefined, // Optional
 
         // Standard Meta Tags
-        svgFavicon: 'favicon.ico', // Optional. Requires favicon.ico fallback
+        svgFavicon: '/favicon.ico', // Optional. Requires favicon.ico fallback
 
         // Microsoft Windows Meta Tags
         msTileColor: '#DD6B20', // Optional
 
         // Apple MacOS Meta Tags
-        appleMaskIcon: 'favicon.ico', // Optional
+        appleMaskIcon: '/favicon.ico', // Optional
         appleMaskIconColor: '#DD6B20', // Optional
       },
     },

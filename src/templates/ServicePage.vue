@@ -85,8 +85,9 @@ export default {
     return {
       title: this.$page.service.title,
       meta: [
-        { property: 'og:title', content: this.$page.service.title },
-        { property: 'og:site_name', content: this.$page.metadata.siteName },
+        { vmid: 'description', name: 'description', content: this.description },
+        // Open Graph data
+        { property: 'og:title', content: this.title },
         { property: 'og:type', content: 'website' },
         {
           property: 'og:url',
@@ -94,46 +95,13 @@ export default {
         },
         {
           property: 'og:image',
-          content:
-            this.$page.metadata.siteUrl +
-              this.$page.service.featuredImage.src || '',
+          content: this.$page.metadata.siteUrl + '/upgeo-logo-horizontal.png',
         },
         {
           property: 'og:description',
-          content: this.$page.service.description,
+          content: this.description,
         },
-        {
-          name: 'twitter:card',
-          content: this.$page.service.featuredImage.src
-            ? 'summary_large_image'
-            : 'summary',
-        },
-        {
-          name: 'twitter:site',
-          content: this.$page.metadata.siteUrl + this.$router.currentRoute.path,
-        },
-        { name: 'twitter:title', content: this.$page.service.title },
-        {
-          name: 'twitter:description',
-          content: this.$page.service.description,
-        },
-        {
-          name: 'twitter:image:src',
-          content:
-            this.$page.metadata.siteUrl +
-              this.$page.service.featuredImage.src || '',
-        },
-        { itemprop: 'name', content: this.$page.service.title },
-        {
-          itemprop: 'description',
-          content: this.$page.service.description,
-        },
-        {
-          itemprop: 'image',
-          content:
-            this.$page.metadata.siteUrl +
-              this.$page.service.featuredImage.src || '',
-        },
+        { property: 'og:site_name', content: this.$page.metadata.siteName },
       ],
     };
   },
