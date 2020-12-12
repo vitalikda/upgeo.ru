@@ -659,7 +659,7 @@ export default {
         },
         {
           property: 'og:description',
-          content: this.$page.metadata.siteDescription,
+          content: this.description,
         },
         {
           name: 'twitter:card',
@@ -674,7 +674,7 @@ export default {
         { name: 'twitter:title', content: this.title },
         {
           name: 'twitter:description',
-          content: this.$page.metadata.siteDescription,
+          content: this.description,
         },
         {
           name: 'twitter:image:src',
@@ -685,7 +685,7 @@ export default {
         { itemprop: 'name', content: this.title },
         {
           itemprop: 'description',
-          content: this.$page.metadata.siteDescription,
+          content: this.description,
         },
         {
           itemprop: 'image',

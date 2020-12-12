@@ -24,7 +24,7 @@ const marked = require('marked');
 
 module.exports = {
   siteName: meta.name,
-  siteDescription: meta.description,
+  // siteDescription: meta.description, // comment to avoid Meta Description duplication
   siteUrl: meta.url,
   icon: meta.icon,
   metaInfo: {
